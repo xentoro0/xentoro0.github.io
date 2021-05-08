@@ -1,11 +1,39 @@
 *{
-    padding:1;
-    margin:0;
+    padding:0;
+    margin:1;
 }
-div{
-    width: 300px;
-    height: 300px;
-    position: relative;
-    border:1 black solid;
+.topDiv{
+    position:fixed;
+    margin-bottom: 30;
+    width: 100vw;
+    height: 150px;
+    background-color: red;
+}
+.mainDiv{
+    margin-top: 180;
+    display:inline-flex;
+    width: auto;
+    overflow: hidden;
+}
+.clipsDiv{
+    float: left;
+    width: auto;
+    height: auto;
     background:gray;
+    align-items: center;
+}
+
+.clipsFrame{
+    width: 620;
+    height: 378;
+    float:inline-start;
+    border:1px black solid;
+}
+.clipsText{
+    position: relative;
+    height: 72;
+    top:15px;
+    float:inline-end;
+    text-align: center;
+    text-shadow: none;
 }
