@@ -18,7 +18,7 @@ window.onload = e => {
 }
 function jsonRes(link, title, ups, author){
         main.innerHTML +=  `<div class='clipsDiv'>
-                                <iframe class="clipsFrame" loading=lazy id="frame" src="${link}" width="600" height="340" scrolling="no" title="Twitch.tv embed" frameborder="0" ></iframe>
+                                <iframe class="clipsFrame" loading="lazy" id="frame" src="${link}" width="600" height="340" scrolling="no" title="Twitch.tv embed" frameborder="0" ></iframe>
                                 <p><span>${ups}</span> upvotes</p><p class="author">Posted by user: <span>${author}</span></p>
                                 <h1 class="clipsText">${title}</h1>
                             </div> \n`;
