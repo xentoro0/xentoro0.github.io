@@ -1,6 +1,7 @@
 const main = document.getElementById("main-div");
 const options = document.getElementById("options");
 const Time = document.getElementById("Time");
+const frame = document.getElementById("frame");
 var errors = 0;
 sendJson();
 function change() {
@@ -17,12 +18,12 @@ window.onload = e => {
 }
 function jsonRes(link, title, ups, author){
         main.innerHTML +=  `<div class='clipsDiv'>
-                                <iframe class="clipsFrame" src="${link}" width="600" height="340" scrolling="no" title="Twitch.tv embed" frameborder="0" ></iframe>
+                                <iframe class="clipsFrame" id="frame" src="${link}" width="600" height="340" scrolling="no" title="Twitch.tv embed" frameborder="0" ></iframe>
                                 <p><span>${ups}</span> upvotes</p><p class="author">Posted by user: <span>${author}</span></p>
                                 <h1 class="clipsText">${title}</h1>
                             </div> \n`;
 }
-
+frame.onload(e => console.log('loaded'));
 function fetchData() {
     fetch('http://localhost:5501/api')
         .then(res => res.json())
