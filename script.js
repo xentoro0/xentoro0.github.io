@@ -23,7 +23,7 @@ function jsonRes(link, title, ups, author){
                                 <h1 class="clipsText">${title}</h1>
                             </div> \n`;
         frame = document.getElementById("frame");
-frame.onload(e => console.log('loaded'));
+        frame.addEventListener('load', (e) => console.log(e));
 }
 function fetchData() {
     fetch('http://localhost:5501/api')
