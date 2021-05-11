@@ -1,7 +1,7 @@
 const main = document.getElementById("main-div");
 const options = document.getElementById("options");
 const Time = document.getElementById("Time");
-const frame = document.getElementById("frame");
+var frame;
 var errors = 0;
 sendJson();
 function change() {
@@ -22,6 +22,7 @@ function jsonRes(link, title, ups, author){
                                 <p><span>${ups}</span> upvotes</p><p class="author">Posted by user: <span>${author}</span></p>
                                 <h1 class="clipsText">${title}</h1>
                             </div> \n`;
+        frame = document.getElementById("frame");
 }
 frame.onload(e => console.log('loaded'));
 function fetchData() {
