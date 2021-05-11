@@ -1,6 +1,31 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans&display=swap" rel="stylesheet">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="stylesheet" href="style.css">
-<div class="topDiv" id="topDiv"></div>
+
+
+<div class="topDiv" id="topDiv">
+    <div id="seachbarDiv" class="searchbar-div">
+        <select id="options" onchange="change()" name="options" class="searchbar">
+            <option value="hot">Hot</option>
+            <option value="top">Top</option>
+            <option value="new">New</option>
+            <option value="rising">Rising</option>
+        </select>
+        <select  id="Time" name="Time" class="searchbar" style="display:none;">
+        <option value="hour">Now</option>
+            <option value="today">Today</option>
+            <option value="week">This Week</option>
+            <option value="month">This Month</option>
+            <option value="year">This Year</option>
+            <option value="all">All Time</option>
+        </select>
+        <button class="searchbar searchBtn" onclick="sendJson()" id="searchbar" type="search">search</button>
+    </div>
+</div>
+
 <div id="main-div" class="mainDiv" ></div>
+
+
 <script src="script.js">
 </script>

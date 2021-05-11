@@ -1,39 +1,75 @@
 *{
     padding:0;
     margin:1;
+    font-family: 'PT Sans', sans-serif;
+}
+html{
+    overflow: hidden;
 }
 .topDiv{
     position:fixed;
     margin-bottom: 30;
     width: 100vw;
     height: 150px;
+    display: flex;
     background-color: red;
+    justify-content: center;
+    align-items: center;
 }
 .mainDiv{
     margin-top: 180;
     display:inline-flex;
-    width: auto;
-    overflow: hidden;
+    width: 100vw;
+    overflow-x: scroll;
+    overflow-y:hidden;
 }
 .clipsDiv{
     float: left;
     width: auto;
-    height: auto;
+    height:450 auto ;
     background:gray;
     align-items: center;
+    margin-right: 30;
 }
-
 .clipsFrame{
     width: 620;
     height: 378;
     float:inline-start;
-    border:1px black solid;
+    border:1px white solid;
 }
 .clipsText{
     position: relative;
     height: 72;
-    top:15px;
+    padding-bottom: 15;
     float:inline-end;
+    text-overflow: ellipsis;
     text-align: center;
     text-shadow: none;
+    background-color: lightgray;
+}
+
+.searchbar{
+    outline: none;
+    border: 0;
+    height: 30px;
+    font-size:18;
+}
+
+.searchBtn{
+    width: 57;
+}
+.searchbar:hover{
+    cursor:pointer;
+    background-color: rgb(187, 187, 187);
+    transition: background-color 0.2s ;
+}
+span{
+    font-size: 20;
+    font-weight: bold;
+}
+.author{
+    padding-left: 15%;
+}
+p{
+    display: inline;
 }
