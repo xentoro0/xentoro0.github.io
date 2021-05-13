@@ -1,6 +1,7 @@
 const main = document.getElementById("main-div");
 const options = document.getElementById("options");
 const Time = document.getElementById("Time");
+const loadingdiv = document.getElementById("loadingDiv");
 var frame;
 var errors = 0;
 sendJson();
@@ -23,7 +24,7 @@ function jsonRes(link, title, ups, author){
                                 <h1 class="clipsText">${title}</h1>
                             </div> \n`;
         frame = document.getElementById("frame");
-        frame.addEventListener('load', (e) => console.log(e));
+        frame.addEventListener('load', (e) => loadingdiv.hidden = true);
 }
 function fetchData() {
     fetch('http://localhost:5501/api')

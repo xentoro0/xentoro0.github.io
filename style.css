@@ -73,3 +73,11 @@ span{
 p{
     display: inline;
 }
+.loadingDiv{
+    position: absolute;
+    margin-top: 180;
+    background-color: white;
+    width: 100vw;
+    height: 516;
+    z-index: 20;
+}
